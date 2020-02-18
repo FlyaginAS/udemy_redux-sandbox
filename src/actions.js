@@ -1,6 +1,11 @@
 const inc=()=>({type: 'INC'});
 const dec=()=>({type: 'DEC'});
-const rnd=(payload)=>({type: 'RND', payload});
+const rnd=()=>{
+    return {
+        type: 'RND',
+        payload: Math.floor(Math.random()*10),
+    };
+};
 
 export {
     inc,
